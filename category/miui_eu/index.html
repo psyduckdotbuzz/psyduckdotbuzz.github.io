@@ -30,7 +30,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s2.loli.net/2021/12/25/yb1otjXK42awmZu.png">
 <meta property="article:published_time" content="2022-06-25T08:41:56.506Z">
-<meta property="article:modified_time" content="2022-07-09T20:41:52.885Z">
+<meta property="article:modified_time" content="2022-07-09T20:47:07.785Z">
 <meta property="article:author" content="大頭鴨">
 <meta property="article:tag" content="Android">
 <meta property="article:tag" content="MIUI">
@@ -195,7 +195,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-07-10 04:41:52" itemprop="dateModified" datetime="2022-07-10T04:41:52+08:00">2022-07-10</time>
+                <time title="Modified: 2022-07-10 04:47:07" itemprop="dateModified" datetime="2022-07-10T04:47:07+08:00">2022-07-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -220,7 +220,7 @@
       
         <p>MIUI 国内版有很多让人诟病的地方，比如自带小米全家桶和很多第三方 App、过多的广告、没有预装 Play Store 等，这篇文章手把手地教你刷入相对原生的 MIUI 欧洲版，改善使用体验。</p>
 <span id="more"></span>
-<h3 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h3><p>Windows（7+）电脑 * 1，受支持的设备 * 1，数据线 * 1，U盘 * 1（ OTG，可选），以及可以<u>自由冲浪</u>的网络环境。<br>电脑上准备对应设备的刷机工具：</p>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>Windows（7+）电脑 * 1，受支持的设备 * 1，数据线 * 1，U盘 * 1（可选），以及可以<u>自由冲浪</u>的网络环境。<br>电脑上准备对应设备的刷机工具：</p>
 <ul>
 <li><p>miflash_unlock-xxx.zip —&gt;（ Bootloader 解锁工具）</p>
 </li>
@@ -258,11 +258,12 @@
 
 <h3 id="启动-TWRP-Recovery"><a href="#启动-TWRP-Recovery" class="headerlink" title="启动 TWRP Recovery"></a>启动 TWRP Recovery</h3><p>然后输入 <code>fastboot boot .\twrp-xxx.img</code> 让手机进入TWRP Recovery，看到以下画面就说明成功进入 twrp 了，此时可将数据线移除，设置语言，不自动锁屏。</p>
 <h3 id="清除数据"><a href="#清除数据" class="headerlink" title="清除数据"></a>清除数据</h3><p>点击 Wipe -&gt; Advanced Wipe -&gt; 选中所有-&gt;滑动滑块确认清除；返回上一级，点击格式化 Data 分区，返回首页。</p>
-<h3 id="开始搞搞阵"><a href="#开始搞搞阵" class="headerlink" title="开始搞搞阵"></a>开始搞搞阵</h3><p>插入 U 盘，点击安装</p>
+<h3 id="开始刷入"><a href="#开始刷入" class="headerlink" title="开始刷入"></a>开始刷入</h3><p>插入 U 盘，点击安装</p>
 <p>笔者这里使用U盘安装，没有 U 盘的朋友可以将 ROM 包拷到手机（&#x2F;sdcard）中，然后选择从[内置存储]安装。</p>
-<p>选择内置存储&#x2F;USB-OTG，开始刷入，等待进度条走完，点击重启系统，在 MIUI 的 logo 界面耐心等待一段时间；一顿客制化后：</p>
+<p>选择内置存储&#x2F;USB-OTG，开始刷入，等待进度条走完，点击重启系统，在 MIUI 的 logo 界面耐心等待一段时间。</p>
 <img src="https://s2.loli.net/2021/12/25/yb1otjXK42awmZu.png" style="zoom:30%;"/>
 
+<p>相关链接：</p>
 <hr>
 <p>Enjoy!</p>
 
@@ -346,7 +347,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">工具准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E9%94%81-Bootloader"><span class="nav-number">2.</span> <span class="nav-text">解锁 Bootloader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">3.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-ADB-%E9%A9%B1%E5%8A%A8"><span class="nav-number">4.</span> <span class="nav-text">安装 ADB 驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5-Fastboot-%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">进入 Fastboot 模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-TWRP-Recovery"><span class="nav-number">6.</span> <span class="nav-text">启动 TWRP Recovery</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="nav-number">7.</span> <span class="nav-text">清除数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E6%90%9E%E6%90%9E%E9%98%B5"><span class="nav-number">8.</span> <span class="nav-text">开始搞搞阵</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E9%94%81-Bootloader"><span class="nav-number">2.</span> <span class="nav-text">解锁 Bootloader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">3.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-ADB-%E9%A9%B1%E5%8A%A8"><span class="nav-number">4.</span> <span class="nav-text">安装 ADB 驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5-Fastboot-%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">进入 Fastboot 模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-TWRP-Recovery"><span class="nav-number">6.</span> <span class="nav-text">启动 TWRP Recovery</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="nav-number">7.</span> <span class="nav-text">清除数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%88%B7%E5%85%A5"><span class="nav-number">8.</span> <span class="nav-text">开始刷入</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
