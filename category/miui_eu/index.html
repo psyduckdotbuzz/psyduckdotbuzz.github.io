@@ -30,7 +30,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s2.loli.net/2021/12/25/yb1otjXK42awmZu.png">
 <meta property="article:published_time" content="2022-06-25T08:41:56.506Z">
-<meta property="article:modified_time" content="2022-07-09T20:32:54.709Z">
+<meta property="article:modified_time" content="2022-07-09T20:41:52.885Z">
 <meta property="article:author" content="大頭鴨">
 <meta property="article:tag" content="Android">
 <meta property="article:tag" content="MIUI">
@@ -195,7 +195,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-07-10 04:32:54" itemprop="dateModified" datetime="2022-07-10T04:32:54+08:00">2022-07-10</time>
+                <time title="Modified: 2022-07-10 04:41:52" itemprop="dateModified" datetime="2022-07-10T04:41:52+08:00">2022-07-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -220,29 +220,29 @@
       
         <p>MIUI 国内版有很多让人诟病的地方，比如自带小米全家桶和很多第三方 App、过多的广告、没有预装 Play Store 等，这篇文章手把手地教你刷入相对原生的 MIUI 欧洲版，改善使用体验。</p>
 <span id="more"></span>
-<h3 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h3><p>Windows（7+）电脑 * 1，受支持的手机 * 1，数据线 * 1，U盘 * 1（ OTG，可选），以及可以<u>自由冲浪</u>的网络环境；<br>以小米 MIX 2S 为例，电脑上准备以下文件：</p>
+<h3 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h3><p>Windows（7+）电脑 * 1，受支持的设备 * 1，数据线 * 1，U盘 * 1（ OTG，可选），以及可以<u>自由冲浪</u>的网络环境。<br>电脑上准备对应设备的刷机工具：</p>
 <ul>
-<li><p>miflash_unlock-x.x.xxx.xx.zip —&gt;（ Bootloader 解锁工具）</p>
+<li><p>miflash_unlock-xxx.zip —&gt;（ Bootloader 解锁工具）</p>
 </li>
 <li><p>UniversalAdbDriverSetup.msi —&gt;（ ADB 驱动）</p>
 </li>
-<li><p>usb_driver_r13-windows.zip —&gt; （ USB 驱动）</p>
+<li><p>usb_driver_xxx.zip —&gt; （ USB 驱动）</p>
 </li>
-<li><p>platform-tools_rxx.x.x-windows.zip —&gt;（ ADB 调试工具）</p>
+<li><p>platform-tools_xxx.zip —&gt;（ ADB 调试工具）</p>
 </li>
-<li><p>twrp-3.5.2_9-0-polaris.img —&gt;（第三方 Recovery ）</p>
+<li><p>twrp-xxx.img —&gt;（第三方 Recovery ）</p>
 </li>
-<li><p>xiaomi.eu_multi_XXXXX_V12.x.x.x.XXXXXXX_v12-xx.zip —&gt;（ 欧洲版 ROM ）</p>
+<li><p>xiaomi.eu_multi_xxx.zip —&gt;（ 欧洲版 ROM ）</p>
 </li>
 </ul>
 <h3 id="解锁-Bootloader"><a href="#解锁-Bootloader" class="headerlink" title="解锁 Bootloader"></a>解锁 Bootloader</h3><p>对于未解锁 Bootloader 的设备，进入设置-&gt;我的设备-&gt;全部参数-&gt;点击 [ MIUI 版本] 若干次直至提示“您现在处于开发者模式”。</p>
 <p>进入“设置 -&gt; 开发者选项 -&gt; 设备解锁状态”中绑定账号和设备，获得解锁权限需要等待一段时间。</p>
 <p>获得解锁权限后，手动进入 Bootloader 模式（关机后，同时按住开机键和音量下键）。</p>
-<p>下载MIUI官网的解锁工具 <code>miflash_unlock-x.x.xxx.xx.zip</code> -&gt; 解压后打开 <code>miflash_unlock.exe</code> -&gt; 登录小米账号，通过 USB 数据线连接手机，点击“解锁”按钮。</p>
+<p>下载MIUI官网的解锁工具 <code>miflash_unlock-xxx.zip</code> -&gt; 解压后打开 <code>miflash_unlock.exe</code> -&gt; 登录小米账号，通过 USB 数据线连接手机，点击“解锁”按钮。</p>
 <p>解锁完成后<strong>备份重要数据</strong>，登出小米账号，移除所有Google账号。</p>
-<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p>解压 <code>platform-tools_rxx.x.x-windows.zip</code> 得到 platform-tools 文件夹，打开设置&gt; 系统&gt; 高级系统设置 &gt;环境变量，在系统变量中选择Path，点击下面的编辑 &gt; 新建 &gt; 粘贴 D:\platform-tools(按照实际路径，不要照搬) &gt; 确定。</p>
+<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p>解压 <code>platform-tools_xxx.zip</code> 得到 platform-tools 文件夹，打开设置&gt; 系统&gt; 高级系统设置 &gt;环境变量，在系统变量中选择Path，点击下面的编辑 &gt; 新建 &gt; 粘贴 D:\platform-tools(按照实际路径，不要照搬) &gt; 确定。</p>
 <h3 id="安装-ADB-驱动"><a href="#安装-ADB-驱动" class="headerlink" title="安装 ADB 驱动"></a>安装 ADB 驱动</h3><p>双击 <code>UniversalAdbDriverSetup.msi</code> 安装驱动，一直下一步，完成后重启电脑。</p>
-<h3 id="进入-Fastboot-模式"><a href="#进入-Fastboot-模式" class="headerlink" title="进入 Fastboot 模式"></a>进入 Fastboot 模式</h3><p>将 <code>twrp-3.5.2_9-0-polaris.img</code> 移动到 platform-tools 文件夹中。</p>
+<h3 id="进入-Fastboot-模式"><a href="#进入-Fastboot-模式" class="headerlink" title="进入 Fastboot 模式"></a>进入 Fastboot 模式</h3><p>将 <code>twrp-xxx.img</code> 移动到 platform-tools 文件夹中。</p>
 <p>确保手机USB调试已打开，进入设置 &gt; 更多设置 &gt; 开发者选项，打开 USB 调试，将手机连接到电脑的 <strong>USB 2.0</strong> 接口（ USB 3.0可能会报错），<br>打开 Windows Powershell 或者 Command Prompt，进入文件夹：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> D:\platform-tools</span><br></pre></td></tr></table></figure>
 
@@ -256,7 +256,7 @@
 <p>查看设备连接状态：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot devices</span><br></pre></td></tr></table></figure>
 
-<h3 id="启动-TWRP-Recovery"><a href="#启动-TWRP-Recovery" class="headerlink" title="启动 TWRP Recovery"></a>启动 TWRP Recovery</h3><p>然后输入 <code>fastboot boot .\twrp-3.5.2_9-0-polaris.img</code> 让手机进入TWRP Recovery，看到以下画面就说明成功进入 twrp 了，此时可将数据线移除，设置语言，不自动锁屏。</p>
+<h3 id="启动-TWRP-Recovery"><a href="#启动-TWRP-Recovery" class="headerlink" title="启动 TWRP Recovery"></a>启动 TWRP Recovery</h3><p>然后输入 <code>fastboot boot .\twrp-xxx.img</code> 让手机进入TWRP Recovery，看到以下画面就说明成功进入 twrp 了，此时可将数据线移除，设置语言，不自动锁屏。</p>
 <h3 id="清除数据"><a href="#清除数据" class="headerlink" title="清除数据"></a>清除数据</h3><p>点击 Wipe -&gt; Advanced Wipe -&gt; 选中所有-&gt;滑动滑块确认清除；返回上一级，点击格式化 Data 分区，返回首页。</p>
 <h3 id="开始搞搞阵"><a href="#开始搞搞阵" class="headerlink" title="开始搞搞阵"></a>开始搞搞阵</h3><p>插入 U 盘，点击安装</p>
 <p>笔者这里使用U盘安装，没有 U 盘的朋友可以将 ROM 包拷到手机（&#x2F;sdcard）中，然后选择从[内置存储]安装。</p>
